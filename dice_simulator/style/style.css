@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+
+
+body{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: "Indie Flower";
+	font-size: 20px;
+	color: #DDD;
+	background-color: #111;
+}
+
+#bodiv{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+h1{
+	box-sizing: border-box;
+	width: 100%;
+	font-size: 1.4em;
+	margin: 0px 0px 10px 0px;
+	padding-left: calc(50% - 107px);
+	text-align: left;
+	transition-duration: 0.8s;
+}
+h1.h1resized{
+	box-sizing: border-box;
+	width: 100%;
+	font-size: 0.66em;
+	box-sizing: border-box;
+	margin: 0px 0px 5px 0px;
+	padding-left: 4px;
+	text-align: left;
+}
+
+.container{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+}
+
+#ctnrfixed{
+	position: fixed;
+	top: 10px;
+	width: calc(100% - 20px);
+}
+
+.dispdesktop{
+	display: none;
+}
+
+/********* NB DES *********/
+
+#txtnbdes{
+	display: none;
+}
+
+#scrollnbctnr{
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+	width: calc(100% - 2px);
+	height: 44px;
+	background-color: #DDD;
+	border-radius: 28px;
+	font-family: "Roboto Slab";
+	overflow-x: scroll;
+}
+
+#scrollnb{
+	min-width: 1070px;
+	height: 33px;
+	padding: 9px calc(50% - 30px) 0px calc(50% - 30px);
+	font-size: 20px;
+	color: #222;
+	text-align: right;
+}
+
+#scrollnb span{
+	margin: 0px 20px 0px 20px;
+}
+#scrollnb span:hover{
+	cursor: pointer;
+	color: #777;
+}
+
+#scrollnbdisp{
+	position: absolute;
+	left: calc(50% - 33px);
+	top: 40px;
+	box-sizing: border-box;
+	width: 66px;
+	height: 66px;
+	border-radius: 60px;
+	background-color: #D6342F;
+	border: solid 4px #DDD;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "Roboto Slab";
+	font-size: 36px;
+	font-weight: bold;
+	z-index: 2;
+	transition: top 0.8s, transform 0.18s;
+}
+#scrollnbdisp:hover{
+	cursor: pointer;
+}
+#scrollnbdisp:active{
+	transform: scale(1.1);
+}
+
+
+/******************** GAME ********************/
+
+#game{
+	box-sizing: border-box;
+	padding: 2px;
+	width: 100%;
+	text-align: center;
+	font-size: 32px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 8px;
+}
+
+#terrain{
+	box-sizing: border-box;
+	height: calc(55vh + 20px);
+	width: 100%;
+	margin-top: 20px;
+	background-color: #D6342F; /*#e74c3c#C02422*/
+	border: solid 9px #DDD;
+	border-radius: 9px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 56px;
+	color: #F5F5F5;
+	box-shadow: inset 0px 0px 12px rgba(0, 0, 0, 0.4);
+	transition-duration: 0.18s;
+}
+#terrain:hover{
+	cursor: pointer;
+}
+#terrain:active{
+	background-color: #C6302C;
+}
+
+
+div.game_portrait{
+	width: 49% !important;
+	margin-right: 50%;
+}
+
+
+
+/**************************** DÉS ****************************/
+
+.de{
+	height: 46px;
+	width: 46px;
+	display: flex;
+	overflow: hidden;
+	border-radius: 10px;
+	background-color: #B02321;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+}
+#terrain > .de{
+	position: absolute;
+}
+.dediv{
+	position: relative;
+	height: 46px;
+	width: 46px;
+	background-color: #EEE;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.dot1{
+	height: 9px;
+	width: 9px;
+	border-radius: 15px;
+	background-color: #222;
+	position: absolute;
+	top: 16%;
+	left: 16%;
+}
+.de1 > .dot1, .de2 > .dot1, .de3 > .dot1{
+	display: none;
+}
+
+.dot2{
+	display: none;
+	height: 9px;
+	width: 9px;
+	border-radius: 10px;
+	background-color: #222;
+	position: absolute;
+	left: 16%;
+	top: 42%;
+}
+.de6 > .dot2{
+	display: inline-block;
+}
+
+.dot3{
+	height: 9px;
+	width: 9px;
+	border-radius: 10px;
+	background-color: #222;
+	position: absolute;
+	bottom: 14%;
+	left: 16%;
+}
+.de1 > .dot3{
+	display: none;
+}
+
+.dot4{
+	height: 9px;
+	width: 9px;
+	border-radius: 10px;
+	background-color: #222;
+	position: absolute;
+	top: 16%;
+	right: 14%;
+}
+.de1 > .dot4{
+	display: none;
+}
+
+.dot5{
+	display: none;
+	height: 9px;
+	width: 9px;
+	border-radius: 10px;
+	background-color: #222;
+	position: absolute;
+	top: 42%;
+	right: 14%;
+}
+.de6 > .dot5{
+	display: inline-block;
+}
+
+.dot6{
+	height: 9px;
+	width: 9px;
+	border-radius: 10px;
+	background-color: #222;
+	position: absolute;
+	bottom: 14%;
+	right: 14%;
+}
+.de1 > .dot6, .de2 > .dot6, .de3 > .dot6{
+	display: none;
+}
+
+.dot7{
+	display: none;
+	height: 9px;
+	width: 9px;
+	border-radius: 10px;
+	background-color: #222;
+	position: absolute;
+	top: 42%;
+	left: 42%;
+}
+.de1 > .dot7, .de3 > .dot7, .de5 > .dot7{
+	display: inline-block;
+}
+
+
+
+/********************** FIN DÉS - RESULT **********************/
+
+#result{
+	margin: calc(55vh + 152px) 0px 0px 0px;
+	box-sizing: border-box;
+	padding-bottom: 26px;
+	width: calc(100% - 6px);
+	min-height: calc(45vh - 170px);
+	background-color: #DDD;
+	border-radius: 8px !important;
+	font-family: "Roboto Slab";
+	text-align: center;
+	color: #444;
+	position: relative;
+	box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.5);
+	z-index: 3;
+	transition-duration: 0.8s;
+}
+
+#scrollresult{
+	margin-top: 36px;
+	min-height: 40px;
+}
+
+#resulttxt{
+	margin: 0px;
+}
+
+.resulttxt{
+	padding: 10px 10px 14px 10px;
+	margin: 0px 0px 2px 0px;
+	border-bottom: dotted 4px #8F8F8F;
+	font-size: 0.9em;
+	color: #999;
+}
+
+.total{
+	color: #DD2724;
+	font-size: 1.33em;
+	font-weight: bold;
+	position: relative;
+	bottom: -2px;
+}
+
+
+#resulttitle{
+	box-sizing: border-box;
+	margin: 0px 0px 0px 0px;
+	padding: 10px 0px 6px 0px;
+	font-size: 13px;
+	width: 100%;
+	border-bottom: dotted 4px #444;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	background-color: #DDD;
+	position: absolute;
+	top: 0px;
+	letter-spacing: 2px;
+	color: #222;
+	z-index: 4;
+}
+.resultfixed{
+	position: fixed !important;
+	width: calc(100% - 22px) !important;
+	top: 0px;
+	/* js left: 11px; */
+	box-shadow: 0px -15px 0px #000;
+}
+
+#copyright{
+	box-sizing: border-box;
+	padding-bottom: 0px;
+	font-size: 11.4px;
+	width: 80%;
+	margin: 0px 0px 0px 10%;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	box-shadow: 0px -11px 12px #DDD;
+	background-color: #DDD;
+	position: absolute;
+	bottom: 0px;
+	color: #999;
+	font-style: italic;
+}
+#copyright span{
+	position: relative;
+	top: -6px;
+}
+
+.designball{
+	height: 12px;
+	width: 12px;
+	border-radius: 20px;
+	background-color: #111;
+	position: absolute;
+	z-index: 5;
+}
+#dball1{
+	top: 6px;
+	left: 6px;
+}
+#dball2{
+	top: 6px;
+	right: 6px;
+}
+#dball3{
+	bottom: 6px;
+	right: 6px;
+}
+#dball4{
+	bottom: 6px;
+	left: 6px;
+}
+.dbfix{
+	height: 12px;
+	width: 12px;
+	border-radius: 20px;
+	background-color: #111;
+	position: fixed;
+	z-index: 5;
+}
+
+
+div.result_portrait{
+	width: 49% !important;
+	margin: 120px 0px 0px 50%  !important;
+}
+
+
+
+
+
+

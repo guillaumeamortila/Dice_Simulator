@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Simulateur de dés</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="icon" href="img/favicon.ico" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+<body>
+
+		<div id="ctnrfixed">
+			<div class="container">
+				<h1 id="h1resize" class="dispsmartphone">Simulateur de dés</h1>
+				<div id="scrollnbdisp">1</div>
+				<div id="scrollnbctnr">
+					<div id="scrollnb">
+						<span id="nb1" onclick="tapNb(1)">1</span>
+						<span id="nb2" onclick="tapNb(2)">2</span>
+						<span id="nb3" onclick="tapNb(3)">3</span>
+						<span id="nb4" onclick="tapNb(4)">4</span>
+						<span id="nb5" onclick="tapNb(5)">5</span>
+						<span id="nb6" onclick="tapNb(6)">6</span>
+						<span id="nb7" onclick="tapNb(7)">7</span>
+						<span id="nb8" onclick="tapNb(8)">8</span>
+						<span id="nb9" onclick="tapNb(9)">9</span>
+						<span id="nb10" onclick="tapNb(10)">10</span>
+					</div>
+				</div>
+				<div id="txtnbdes">
+					<div id="ctnrnbdes">
+						<span>Lancer :</span>
+						<div id="nbdes">
+							<div><button id="less">-</button></div>
+							<div><span id="nb">2</span></div>
+							<div><button id="more">+</button></div>
+						</div>
+						<span id="desortho">DÉS</span>
+					</div>
+					<button id="go">GO</button>
+				</div>
+				<div id="game">
+					<div id="terrain">
+						Faites<br>vos jeux !!
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="result">
+			<div id="scrollresult">
+				<div id="resulttxt"></div>
+			</div>
+			<p id="resulttitle">RÉSULTATS</p>
+			<p id="copyright"><span>2017 © Guillaume Amortila</span></p>
+			<div class="designball" id="dball1"></div>
+			<div class="designball" id="dball2"></div>
+			<div class="designball" id="dball3"></div>
+			<div class="designball" id="dball4"></div>
+		</div>
+
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
