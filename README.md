@@ -1,2 +1,2 @@
 # Dice_Simulator
-Simulateur de dés
+Simulateur de dés fait en Javascript pur. Enjoy !
